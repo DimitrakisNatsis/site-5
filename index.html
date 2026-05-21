@@ -1,0 +1,719 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ARMA TRADING 3339 LTD EOOD | Industrial Machinery & B2B Wholesale</title>
+    <meta name="description" content="Leading merchant wholesalers of industrial machinery, equipment, and durable goods based in Sofia, Bulgaria. Connecting heavy industry with digital B2B solutions.">
+    <style>
+        /* DESIGN SYSTEM: INDUSTRIAL TECH & HEAVY MACHINERY */
+        :root {
+            --primary: #0F172A;         /* Forged Steel / Very Dark Blue */
+            --primary-light: #1E293B;
+            --accent: #EA580C;          /* Safety Orange / Industrial Accent */
+            --accent-hover: #C2410C;
+            --bg-base: #F1F5F9;         /* Concrete Gray */
+            --bg-white: #FFFFFF;
+            --text-main: #334155;
+            --text-muted: #64748B;
+            --border-color: #CBD5E1;
+            --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            --font-mono: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: var(--font-sans);
+            line-height: 1.6;
+            color: var(--text-main);
+            background-color: var(--bg-base);
+            -webkit-font-smoothing: antialiased;
+            overflow-x: hidden;
+        }
+
+        /* 1. NAVIGATION */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.98);
+            backdrop-filter: blur(10px);
+            padding: 20px 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1000;
+            border-bottom: 3px solid var(--accent);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+        }
+
+        .logo {
+            font-family: var(--font-sans);
+            font-size: 1.5rem;
+            font-weight: 900;
+            color: var(--primary);
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        .logo span {
+            color: var(--accent);
+            font-weight: 800;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 30px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-main);
+            font-weight: 700;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--accent);
+        }
+
+        /* 2. HERO SECTION */
+        header {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            padding: 0 10%;
+            background: linear-gradient(135deg, rgba(15, 23, 42, 0.98) 0%, rgba(30, 41, 59, 0.95) 100%);
+            background-color: var(--primary);
+            position: relative;
+            color: var(--bg-white);
+            overflow: hidden;
+        }
+
+        /* Abstract Industrial Blueprint/Grid Background */
+        header::before {
+            content: "";
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background-image: 
+                linear-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+            background-size: 40px 40px;
+            pointer-events: none;
+            z-index: 0;
+            transform: perspective(1000px) rotateX(60deg);
+            transform-origin: bottom;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            max-width: 900px;
+        }
+
+        .hero-badge {
+            display: inline-block;
+            background: rgba(234, 88, 12, 0.15);
+            color: var(--accent);
+            padding: 8px 24px;
+            border-radius: 2px;
+            font-size: 0.85rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 30px;
+            border: 1px solid var(--accent);
+            font-family: var(--font-mono);
+        }
+
+        header h1 {
+            font-size: clamp(2.5rem, 5vw, 4.5rem);
+            font-weight: 900;
+            line-height: 1.15;
+            margin-bottom: 25px;
+            letter-spacing: -1px;
+            text-transform: uppercase;
+        }
+
+        header p {
+            font-size: clamp(1.1rem, 2vw, 1.25rem);
+            color: #CBD5E1;
+            max-width: 700px;
+            margin-bottom: 40px;
+            font-weight: 400;
+            line-height: 1.6;
+        }
+
+        .btn-primary {
+            display: inline-block;
+            background: var(--accent);
+            color: var(--bg-white);
+            padding: 18px 45px;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: all 0.3s;
+            border: 2px solid var(--accent);
+        }
+
+        .btn-primary:hover {
+            background: transparent;
+            color: var(--accent);
+        }
+
+        /* 3. ABOUT SECTION */
+        .section {
+            padding: 100px 10%;
+        }
+
+        .bg-white {
+            background-color: var(--bg-white);
+        }
+
+        .section-header {
+            margin-bottom: 60px;
+        }
+
+        .section-header h2 {
+            font-size: 2.5rem;
+            color: var(--primary);
+            margin-bottom: 15px;
+            font-weight: 900;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .section-header .line {
+            width: 80px;
+            height: 5px;
+            background: var(--accent);
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1.2fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .about-text {
+            color: var(--text-muted);
+            font-size: 1.1rem;
+        }
+
+        .about-text p {
+            margin-bottom: 20px;
+            text-align: justify;
+        }
+
+        .highlight-box {
+            background: var(--bg-base);
+            padding: 40px;
+            border-radius: 8px;
+            border-left: 6px solid var(--primary);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            border-top: 1px solid var(--border-color);
+            border-right: 1px solid var(--border-color);
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        /* 4. WHOLESALE MACHINERY EXPERTISE */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+        }
+
+        .service-card {
+            background: var(--bg-white);
+            padding: 50px 40px;
+            border-radius: 8px;
+            border: 1px solid var(--border-color);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 5px;
+            background: var(--primary);
+            transition: background 0.3s;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+        }
+
+        .service-card:hover::before {
+            background: var(--accent);
+        }
+
+        .service-icon {
+            font-family: var(--font-mono);
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: var(--accent);
+            margin-bottom: 20px;
+            display: inline-block;
+            background: rgba(234, 88, 12, 0.1);
+            padding: 12px 18px;
+            border-radius: 4px;
+        }
+
+        .service-card h3 {
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+            color: var(--primary);
+            font-weight: 800;
+            text-transform: uppercase;
+        }
+
+        /* 5. B2B APP PROMO (CRITICAL FOR GOOGLE PLAY CONSOLE) */
+        .app-promo {
+            background: var(--primary);
+            color: var(--bg-white);
+            padding: 100px 10%;
+            display: grid;
+            grid-template-columns: 1.2fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .app-content h2 {
+            font-size: 2.8rem;
+            color: var(--bg-white);
+            margin-bottom: 20px;
+            font-weight: 900;
+            text-transform: uppercase;
+        }
+
+        .app-content p {
+            font-size: 1.1rem;
+            color: #CBD5E1;
+            margin-bottom: 30px;
+            line-height: 1.7;
+        }
+
+        .feature-list {
+            list-style: none;
+            margin-bottom: 40px;
+        }
+
+        .feature-list li {
+            position: relative;
+            padding-left: 35px;
+            margin-bottom: 15px;
+            font-size: 1.05rem;
+            color: #F1F5F9;
+        }
+
+        .feature-list li::before {
+            content: "■";
+            position: absolute;
+            left: 0;
+            color: var(--accent);
+            font-size: 1.2rem;
+            line-height: 1;
+        }
+
+        .btn-outline {
+            display: inline-block;
+            background: transparent;
+            color: var(--accent);
+            padding: 15px 35px;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border: 2px solid var(--accent);
+            transition: all 0.3s;
+        }
+
+        .btn-outline:hover {
+            background: var(--accent);
+            color: var(--bg-white);
+        }
+
+        .app-visual {
+            height: 100%;
+            min-height: 380px;
+            background: linear-gradient(135deg, rgba(234, 88, 12, 0.15) 0%, rgba(15, 23, 42, 0.8) 100%);
+            border: 2px dashed rgba(234, 88, 12, 0.4);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 40px;
+            position: relative;
+        }
+
+        /* 6. CONTACT & CORPORATE INFO (MATCHES D&B EXACTLY) */
+        .contact-container {
+            display: grid;
+            grid-template-columns: 1.2fr 1fr;
+            gap: 60px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .corp-details {
+            background: var(--bg-white);
+            padding: 50px;
+            border-radius: 8px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.05);
+            border-top: 5px solid var(--primary);
+        }
+
+        .corp-details h3 {
+            font-size: 1.6rem;
+            margin-bottom: 30px;
+            color: var(--primary);
+            text-transform: uppercase;
+            font-weight: 900;
+        }
+
+        .detail-row {
+            margin-bottom: 25px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .detail-row:last-child {
+            border-bottom: none;
+            padding-bottom: 0;
+            margin-bottom: 0;
+        }
+
+        .detail-label {
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            color: var(--text-muted);
+            font-weight: 800;
+            letter-spacing: 1px;
+            margin-bottom: 5px;
+        }
+
+        .detail-value {
+            font-size: 1.05rem;
+            color: var(--primary);
+            font-weight: 600;
+            line-height: 1.5;
+        }
+
+        .contact-form {
+            background: var(--bg-white);
+            padding: 50px;
+            border-radius: 8px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.05);
+        }
+
+        .contact-form h3 {
+            font-size: 1.6rem;
+            margin-bottom: 30px;
+            color: var(--primary);
+            text-transform: uppercase;
+            font-weight: 900;
+        }
+
+        .contact-form input, .contact-form textarea {
+            width: 100%;
+            padding: 16px;
+            margin-bottom: 20px;
+            border: 1px solid var(--border-color);
+            border-radius: 4px;
+            font-family: var(--font-sans);
+            font-size: 1rem;
+            background: var(--bg-base);
+            transition: border-color 0.3s;
+        }
+
+        .contact-form input:focus, .contact-form textarea:focus {
+            outline: none;
+            border-color: var(--accent);
+            background: var(--bg-white);
+        }
+
+        .contact-form textarea {
+            height: 150px;
+            resize: vertical;
+        }
+
+        .btn-submit {
+            background: var(--primary);
+            color: var(--bg-white);
+            padding: 16px 0;
+            width: 100%;
+            border: none;
+            border-radius: 4px;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            cursor: pointer;
+            transition: background 0.3s;
+            font-size: 0.95rem;
+        }
+
+        .btn-submit:hover {
+            background: var(--primary-light);
+        }
+
+        /* 7. FOOTER & LEGAL */
+        footer {
+            background: #090E17;
+            color: #94A3B8;
+            padding: 80px 10% 40px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 50px;
+            margin-bottom: 60px;
+            border-bottom: 1px solid rgba(255,255,255,0.05);
+            padding-bottom: 50px;
+        }
+
+        .footer-col h4 {
+            color: var(--bg-white);
+            font-size: 1.1rem;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .footer-col ul {
+            list-style: none;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 12px;
+        }
+
+        .footer-col ul a {
+            color: #94A3B8;
+            text-decoration: none;
+            font-size: 0.95rem;
+            transition: color 0.3s;
+        }
+
+        .footer-col ul a:hover {
+            color: var(--accent);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            font-size: 0.85rem;
+        }
+
+        @media (max-width: 992px) {
+            .nav-links { display: none; }
+            .about-grid, .app-promo, .contact-container { grid-template-columns: 1fr; }
+            header h1 { font-size: 2.2rem; }
+            .app-promo { padding: 80px 5%; }
+            .app-visual { display: none; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="logo">ARMA TRADING <span>3339</span></div>
+        <div class="nav-links">
+            <a href="#about">Corporate</a>
+            <a href="#machinery">Machinery Wholesale</a>
+            <a href="#b2b-app">B2B Mobile Portal</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </nav>
+
+    <header>
+        <div class="hero-content">
+            <div class="hero-badge">Industrial Machinery Merchant Wholesalers</div>
+            <h1>Empowering Heavy Industry Through Advanced Logistics.</h1>
+            <p>Providing seamless B2B wholesale distribution of durable goods, industrial machinery, and equipment across Europe, backed by cutting-edge digital procurement technology.</p>
+            <a href="#b2b-app" class="btn-primary">Explore B2B App Solutions</a>
+        </div>
+    </header>
+
+    <section id="about" class="section bg-white">
+        <div class="section-header">
+            <h2>Corporate Overview</h2>
+            <div class="line"></div>
+        </div>
+        <div class="about-grid">
+            <div class="about-text">
+                <p><strong>ARMA TRADING 3339 LTD EOOD</strong> is a premier industrial supply enterprise based in Sofia, Bulgaria. Operating under the strategic direction of Key Principal Lyusien Teodosiev, we bridge the gap between heavy equipment manufacturers and industrial facilities across the European Union.</p>
+                <p>We are a dedicated B2B partner in the Wholesale Trade sector, specializing in the complex logistics and distribution of industrial machinery, heavy equipment, and commercial supplies. Our commitment is to ensure operational continuity for factories and construction firms through reliable, rapid wholesale supply chains.</p>
+            </div>
+            <div class="highlight-box">
+                <h3 style="font-size: 1.3rem; color: var(--primary); margin-bottom: 10px; text-transform: uppercase; font-weight: 900;">Industry Classification</h3>
+                <p style="color: var(--text-muted); line-height: 1.6;">
+                    Machinery, Equipment, and Supplies Merchant Wholesalers.<br>
+                    Merchant Wholesalers, Durable Goods.<br>
+                    Industrial Machinery and Equipment.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section id="machinery" class="section">
+        <div class="section-header">
+            <h2>Distribution Competencies</h2>
+            <div class="line"></div>
+        </div>
+        <div class="services-grid">
+            <div class="service-card">
+                <div class="service-icon">[ HW-01 ]</div>
+                <h3>Heavy Machinery Supply</h3>
+                <p>Procurement and wholesale distribution of large-scale industrial machinery, ensuring compliance with heavy manufacturing standards.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">[ PT-02 ]</div>
+                <h3>Equipment & Durable Goods</h3>
+                <p>Reliable supply of durable merchant goods, replacement components, and mechanical supplies to minimize facility downtime.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">[ LG-03 ]</div>
+                <h3>Industrial Logistics</h3>
+                <p>Specialized freight coordination for oversized equipment, utilizing modern tracking systems from our Sofia hub to client sites.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="b2b-app" class="app-promo">
+        <div class="app-content">
+            <h2>ARMA Connect B2B Portal</h2>
+            <p>To provide our industrial clients with unprecedented control over their supply chain, <strong>ARMA TRADING 3339 LTD EOOD has developed a proprietary B2B mobile application published on the Google Play Store.</strong></p>
+            <p>The <em>ARMA Connect</em> app is a robust procurement tool. It enables factory managers and purchasing agents to browse interactive machinery catalogs, order heavy-duty spare parts via barcode scanning, and track the real-time logistics of oversized freight directly from their Android devices.</p>
+            
+            <ul class="feature-list">
+                <li>Digital B2B catalog for industrial machinery and durable goods.</li>
+                <li>Instant spare parts ordering via mobile barcode scanning.</li>
+                <li>Live GPS tracking for heavy equipment freight deliveries.</li>
+                <li>Secure access to AR (Augmented Reality) machinery maintenance manuals.</li>
+            </ul>
+            
+            <a href="#contact" class="btn-outline">Google Play Developer Support</a>
+        </div>
+        <div class="app-visual">
+            <div style="text-align: left; width: 100%;">
+                <p style="color: var(--accent); font-family: var(--font-mono); font-size: 0.9rem; margin-bottom: 10px;">> INIT ARMA_B2B_TERMINAL</p>
+                <p style="color: rgba(255,255,255,0.7); font-family: var(--font-mono); font-size: 0.85rem; line-height: 1.8;">
+                    SYNCING EQUIPMENT CATALOG... [OK]<br>
+                    CONNECTING TO LOGISTICS API... [OK]<br>
+                    LOADING DIGITAL MANUALS... [OK]<br>
+                    <br>
+                    <span style="color: #10B981; font-weight: bold;">SECURE PROCUREMENT PORTAL ONLINE</span>
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="section bg-white">
+        <div class="section-header">
+            <h2>Corporate Registration & Contact</h2>
+            <div class="line"></div>
+        </div>
+        
+        <div class="contact-container">
+            <div class="corp-details">
+                <h3>Entity Verification</h3>
+                
+                <div class="detail-row">
+                    <div class="detail-label">Legal Entity Name</div>
+                    <div class="detail-value"><strong>ARMA TRADING 3339 LTD EOOD</strong></div>
+                </div>
+
+                <div class="detail-row">
+                    <div class="detail-label">Key Principal</div>
+                    <div class="detail-value">LYUSIEN TEODOSIEV</div>
+                </div>
+
+                <div class="detail-row">
+                    <div class="detail-label">Industry Classification</div>
+                    <div class="detail-value">
+                        Machinery, Equipment, and Supplies Merchant Wholesalers<br>
+                        Merchant Wholesalers, Durable Goods
+                    </div>
+                </div>
+
+                <div class="detail-row">
+                    <div class="detail-label">Registered Headquarters</div>
+                    <div class="detail-value">
+                        130 - 132 Aleksandar Stamboliyski blvd.<br>
+                        Vazrazhdane Distr., Fl. 1, Office 1<br>
+                        Sofia, Stolichna, 1309<br>
+                        Bulgaria
+                    </div>
+                </div>
+
+                <div class="detail-row">
+                    <div class="detail-label">Official Communication</div>
+                    <div class="detail-value" style="color: var(--accent);">info@armatrading.org</div>
+                </div>
+            </div>
+
+            <div class="contact-form">
+                <h3>B2B Procurement Inquiry</h3>
+                <form onsubmit="event.preventDefault();">
+                    <input type="text" placeholder="Factory / Company Name" required>
+                    <input type="email" placeholder="Corporate Email Address" required>
+                    <input type="text" placeholder="Subject (e.g., Equipment Quote, App Access)">
+                    <textarea placeholder="Please detail your machinery or technical requirements..." required></textarea>
+                    <button type="submit" class="btn-submit">Submit Official Request</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-grid">
+            <div class="footer-col">
+                <div class="logo" style="color: var(--bg-white); font-size: 1.2rem; margin-bottom: 20px;">ARMA TRADING <span style="color: var(--accent);">3339</span></div>
+                <p>Engineering the future of industrial wholesale trade in Bulgaria through robust logistics and digital B2B solutions.</p>
+            </div>
+            
+            <div class="footer-col">
+                <h4>Mobile App Support</h4>
+                <ul>
+                    <li><a href="#">Google Play Publisher Profile</a></li>
+                    <li><a href="#">Report a B2B App Issue</a></li>
+                    <li><a href="#"><strong>Request Account & Data Deletion</strong></a></li>
+                    <li><a href="#">App User Guide (B2B Clients)</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-col">
+                <h4>Legal & Compliance</h4>
+                <ul>
+                    <li><a href="#">Terms of Service (Wholesale)</a></li>
+                    <li><a href="#">Privacy Policy (GDPR Compliant)</a></li>
+                    <li><a href="#">Machinery Supply Agreements</a></li>
+                    <li><a href="#">Cookie Policy</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 ARMA TRADING 3339 LTD EOOD. Registered in Bulgaria. All rights reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
